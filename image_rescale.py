@@ -1,3 +1,4 @@
+from Products.Archetypes.Field import ObjectField
 from transaction import commit
 
 site = app.uaic_school
@@ -33,7 +34,7 @@ for brain in image_brains:
         data = fvalue.read()
         if len(value.data) > len(data) + margin:
             print image.getId(), value.getSize(), len(value.data), len(data)
-            field.set(image, data)
+            ObjectField.set(field, image, data)
             obj_writes += 1
             if obj_writes >= commit_at:
                 print "committing"
