@@ -1,7 +1,7 @@
 from Products.Archetypes.Field import ObjectField
 from transaction import commit
 
-site = app.uaic_school
+site = obj
 pc = site.portal_catalog
 
 # if an image exceeds these dimensions, it will be checked
